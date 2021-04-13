@@ -239,7 +239,7 @@ public class MatrixManager {
                     return;
                 }
 
-                if (!call.getVersion().equals(1L)) {
+                if (!(call.getVersion().equals(1L) || call.getVersion().equals(0L))) {
                     log.warn("Ignoring call event: unknown version: {}", call.getVersion());
                     return;
                 }
